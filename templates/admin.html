@@ -1,0 +1,7 @@
+<h2>Liste des rendez-vous</h2>
+<ul>
+  {% for rdv in rdvs %}
+    <li>{{ rdv[1] }} à {{ rdv[2] }}</li>
+  {% endfor %}
+</ul>
+<a href="/logout">Déconnexion</a>
