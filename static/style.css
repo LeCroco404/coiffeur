@@ -1,0 +1,116 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    text-align: center;
+    color: #333;
+}
+
+header {
+    background-color: #e0c1b3;
+    padding: 2em 1em;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.hero-image {
+    width: 80%;
+    max-width: 600px;
+    margin: 2em auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.buttons {
+    margin: 2em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: #a67c52;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0.5em;
+    font-weight: bold;
+}
+
+.admin-link {
+    display: block;
+    margin-top: 1em;
+    font-size: 0.9em;
+    color: #555;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #e0c1b3;
+    padding: 1em;
+    font-size: 0.8em;
+}
+
+.rdv-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.rdv-form label {
+    margin-top: 1em;
+    text-align: left;
+    font-weight: bold;
+}
+
+.rdv-form input {
+    padding: 0.5em;
+    margin-top: 0.3em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.rdv-form .btn {
+    margin-top: 2em;
+    background-color: #a67c52;
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rdv-form .btn:hover {
+    background-color: #8c6239;
+}
+
+.rdv-table {
+    width: 90%;
+    max-width: 800px;
+    margin: 2em auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.rdv-table th, .rdv-table td {
+    padding: 1em;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.rdv-table th {
+    background-color: #a67c52;
+    color: white;
+}
+
+.rdv-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

@@ -1,7 +1,47 @@
-<h2>Liste des rendez-vous</h2>
-<ul>
-  {% for rdv in rdvs %}
-    <li>{{ rdv[1] }} à {{ rdv[2] }}</li>
-  {% endfor %}
-</ul>
-<a href="/logout">Déconnexion</a>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau de bord admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Tableau de bord — Chez Papa Coiffeur</h1>
+        <p>Liste des rendez-vous enregistrés</p>
+    </header>
+
+    <main>
+        {% if rdvs %}
+            <table class="rdv-table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Téléphone</th>
+                        <th>Date</th>
+                        <th>Heure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rdv in rdvs %}
+                    <tr>
+                        <td>{{ rdv[1] }}</td>
+                        <td>{{ rdv[2] }}</td>
+                        <td>{{ rdv[3] }}</td>
+                        <td>{{ rdv[4] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>Aucun rendez-vous pour le moment.</p>
+        {% endif %}
+
+        <a href="{{ url_for('index') }}" class="admin-link">← Retour à l'accueil</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chez Papa Coiffeur</p>
+    </footer>
+</body>
+</html>

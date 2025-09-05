@@ -1,7 +1,27 @@
-<h2>Prendre rendez-vous</h2>
-<form method="POST" action="/prendre-rdv">
-  Nom: <input type="text" name="nom"><br>
-  Heure: <input type="text" name="heure"><br>
-  <button type="submit">Envoyer</button>
-</form>
-<a href="/login">Accès admin</a>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Salon Chez Papa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue chez Papa Coiffeur</h1>
+        <p>Votre style, notre passion.</p>
+    </header>
+
+    <main>
+        <img src="{{ url_for('static', filename='salon.jpg') }}" alt="Salon de coiffure" class="hero-image">
+
+        <div class="buttons">
+            <a href="{{ url_for('rdv') }}" class="btn">Prendre rendez-vous</a>
+            <a href="{{ url_for('login') }}" class="admin-link">Accès admin</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chez Papa Coiffeur — Seillons-Source-d'Argens</p>
+    </footer>
+</body>
+</html>

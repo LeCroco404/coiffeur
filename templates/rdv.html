@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prendre rendez-vous</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Réservez votre rendez-vous</h1>
+        <p>Chez Papa Coiffeur — rapide, simple et efficace</p>
+    </header>
+
+    <main>
+        <form action="{{ url_for('rdv') }}" method="POST" class="rdv-form">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required>
+
+            <label for="date">Date :</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="heure">Heure :</label>
+            <input type="time" id="heure" name="heure" required>
+
+            <button type="submit" class="btn">Valider le rendez-vous</button>
+        </form>
+
+        <a href="{{ url_for('index') }}" class="admin-link">← Retour à l'accueil</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chez Papa Coiffeur</p>
+    </footer>
+</body>
+</html>
